@@ -1,0 +1,71 @@
+<table class="table table-bordered table-striped" style="width: 100%">
+	<tr align="center">
+		<td valign="top" colspan="3"><?=($dtdefault->foto!= null)? '<img src="'.base_url("uploads/photo/pegawai/".$dtdefault->foto).'" width="170px" height="170px"></img>' : '<code>N/A</code>';?></td>
+	</tr>
+	<tr>
+		<td valign="top" style="color:#00008B" width="200px">NIK</td>
+		<td valign="top">:</td>
+		<td valign="top" style="color:#9900cc"><?=$dtdefault->nik?></td>
+	</tr>
+	<tr>
+		<td valign="top" style="color:#00008B">Nama Lengkap</td>
+		<td valign="top">:</td>
+		<td valign="top" style="color:#9900cc"><?=$dtdefault->nama_pegawai?></td>
+	</tr>
+	<tr>
+		<td valign="top" style="color:#00008B">Jenis Kelamin</td>
+		<td valign="top">:</td>
+		<td valign="top" style="color:#9900cc"><?=$dtdefault->jenis_kelamin?></td>
+	</tr>
+	<tr>
+		<td valign="top" style="color:#00008B">Jabatan</td>
+		<td valign="top">:</td>
+		<td valign="top" style="color:#9900cc"><?=$dtdefault->jabatan?></td>
+	</tr>
+	<tr>
+		<td valign="top" style="color:#00008B">Kota Lahir</td>
+		<td valign="top">:</td>
+		<td valign="top" style="color:#9900cc"><?=$dtdefault->kota_lahir?></td>
+	</tr>
+	<tr>
+		<td valign="top" style="color:#00008B">Tanggal Lahir</td>
+		<td valign="top">:</td>
+		<td valign="top" style="color:#9900cc"><?=tgl_indo($dtdefault->tgl_lahir)?></td>
+	</tr>
+	<tr>
+		<td valign="top" style="color:#00008B">Alamat</td>
+		<td valign="top">:</td>
+		<td valign="top" style="color:#9900cc"><?=$dtdefault->alamat?></td>
+	</tr>
+	<tr>
+		<td valign="top" style="color:#00008B">Strata Pendidikan</td>
+		<td valign="top">:</td>
+		<td valign="top" style="color:#9900cc"><?=$dtdefault->strata_pendidikan?></td>
+	</tr>
+	<tr>
+		<td valign="top" style="color:#00008B">Bidang Pendidikan</td>
+		<td valign="top">:</td>
+		<td valign="top" style="color:#9900cc"><?=$dtdefault->bidang_pendidikan?></td>
+	</tr>
+	<tr>
+		<td valign="top" style="color:#00008B">Jumlah Anak</td>
+		<td valign="top">:</td>
+		<td valign="top" style="color:#9900cc"><?=$dtdefault->jml_anak?></td>
+	</tr>
+	<tr>
+		<td valign="top" style="color:#00008B">Email Pegawai</td>
+		<td valign="top">:</td>
+		<td valign="top" style="color:#9900cc"><?=$dtdefault->email?></td>
+	</tr>
+	<tr>
+    	<td valign="top" style="color:#00008B">Lampiran</td>
+    	<td valign="top">:</td>
+    	<?php
+    	    $file = '<a href="'.base_url('uploads/fileapps/pegawai/'.$dtdefault->lampiran).'" download><i class="fa fa-download"></i> Download</a>';
+    	    if($dtdefault->lampiran == null){
+    	        $file = '<code>N/A</code>';
+    	    }
+    	?>
+    	<td valign="top"><?=$file?></td>
+    </tr>
+</table>

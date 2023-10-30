@@ -1,0 +1,22 @@
+<table class="table table-bordered table-striped" style="width: 100%">
+	<tr>
+		<td valign="top">Deskripsi Habis Pakai</td>
+		<td valign="top">:</td>
+		<td valign="top"><?=$dtdefault->Desc_Consumables?></td>
+	</tr>
+	<tr>
+		<td valign="top">Tanggal</td>
+		<td valign="top">:</td>
+		<td valign="top"><?=tgl_indo($dtdefault->Tgl_PengadaanPertama)?></td>
+	</tr>
+	<tr>
+		<td valign="top">Lokasi Simpan</td>
+		<td valign="top">:</td>
+		<td valign="top"><?=$dtdefault->Desc_Lokasi_Simpan?></td>
+	</tr>
+	<tr>
+		<td valign="top">Saldo</td>
+		<td valign="top">:</td>
+		<td valign="top">Rp. <?=number_format($dtdefault->Saldo)?></td>
+	</tr>
+</table>

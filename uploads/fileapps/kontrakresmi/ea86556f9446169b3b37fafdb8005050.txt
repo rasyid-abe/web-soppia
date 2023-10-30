@@ -1,0 +1,25 @@
+stack yg digunakan:
+Laravel sebagai framework utama
+Bootstrap+jquery untuk tampolan
+Laravel Mix untuk asset bundler
+mysql untuk database
+
+installation:
+1. saya asumsikan php dan mysql berjalan dengan baik di mesin pengguna.
+2. unzip file kode terlampir.
+3. dengan menggunakan terminal/cmd, masuk ke direktori "transaction-manager"
+4. konfigurasi file ".env" untuk menyesuaikan setting database dengan mesin pengguna.
+5. eksekusi "php artisan migrate --seed" di terminal untuk populate database.
+6. eksekusi "php artisan serve" di terminal untuk start server.
+7. buka browser dan buka url "http://localhost:8000"
+
+
+credential:
+public url: http://tonjoo.wandy.tech
+local url: http://localhost:8000
+
+username: admin
+password: password
+
+test logika terdapat pada folder "transaction-manager/app/Http/Controllers/Admin/Test/LogicCont atau bisa di akses melalui menu di admin yang sudah login,
+begitu juga dengan test slicing (jonior).

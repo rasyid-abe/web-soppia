@@ -1,0 +1,212 @@
+<link rel="stylesheet" href="<?=base_url("assets/adminlte/bower_components/select2/dist/css/select2.min.css")?>">
+<link rel="stylesheet" href="<?=base_url("assets/adminlte/bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css")?>">
+<!-- Content Header (Page header) -->
+<section class="content-header">
+  <h1>
+    <?=$titlepage?>
+    <small><?=$subtitlepage?></small>
+  </h1>
+  <ol class="breadcrumb">
+    <li><a href="<?=base_url("dashboard")?>"><i class="fa fa-dashboard"></i> <?=$breadcrumb1?></a></li>
+    <li><a ><?=$breadcrumb2?></a></li>
+    <li class="active"><?=$breadcrumb3?></li>
+  </ol>
+</section>
+
+<!-- Main content -->
+<section class="content">
+
+  <?php if($this->session->flashdata('error')){ ?>
+    <br>
+    <div class="alert alert-danger"><?=$this->session->flashdata('error')?></div>
+  <?php }else if($this->session->flashdata('success')){ ?>
+    <br>
+    <div class="alert alert-success"><?=$this->session->flashdata('success')?></div>
+  <?php } ?>
+
+  <!-- Default box -->
+  <div class="box box-danger">
+    <div class="box-header with-border">
+      <h3 class="box-title"><?=$titlebox?></h3>
+
+      <div class="box-tools pull-right">
+        <a href="<?=base_url($this->uri->segment(1).'/'.$this->uri->segment(2))?>" class="btn btn-box-tool" data-toggle="tooltip"
+                title="Kembali Ke Manage <?=$subtitlepage?>">
+          <i class="fa fa-arrow-circle-left"></i> Back</a>
+        <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Refresh Page" onclick='location.reload();'>
+          <i class="fa fa-refresh"></i> Refresh</button>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <?php echo form_open_multipart($this->uri->segment(1).'/'.$this->uri->segment(2)."/store");?>
+    <input type="hidden" name="<?=$this->security->get_csrf_token_name()?>" value="<?=$this->security->get_csrf_hash()?>" />    
+    
+    <div class="col-sm-6"> 
+      <div class="box" style="border-top:0px solid">
+        <div class="box-header with-border">
+          <h3 class="box-title">Foto Profile</h3>
+        </div>
+        <div class="box-body">     
+
+          <div class="col-sm-12 col-md-12">
+            <div class="col-sm-12 col-md-12 p-5">
+              <center>
+                <img src="<?=base_url('assets/images/default-50x50.gif')?>" class="mx-auto img-circle" width='170px' height="170px" id='displayavatar'>
+              </center>
+              <br/>
+              <br/>
+              <div class="form-group">
+                <label for="foto"></label>
+                <input type="file" name="foto" class="form-control" id="foto">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      
+      <div class="box" style="border-top:0px solid">
+        <div class="box-header with-border">
+          <h3 class="box-title">File Lampiran</h3>
+        </div>
+        <div class="box-body">     
+
+          <div class="col-sm-12 col-md-12">
+            <div class="col-sm-12 col-md-12 p-5">
+              <div class="form-group">
+                <label for="foto"></label>
+                <input type="file" name="lampiran" class="form-control" id="lampiran">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="col-sm-6"> 
+    <div class="box" style="border-top:0px solid">
+        <div class="box-header with-border">
+          <h3 class="box-title">Data Diri</h3>
+        </div>
+        <div class="box-body">
+
+            <div class="form-group col-sm-12">
+                <div class="col-sm-12" style="color:#00008B">
+                  NIK<br/>
+                  <input type="text" class="form-control" name="nik" id="nik" placeholder="Nomer Induk Kependudukan" value="<?=$this->session->flashdata('oldinput')['nik']?>"  required >
+                </div>
+            </div>
+            
+            <div class="form-group col-sm-12">
+                <div class="col-sm-12 style="color:#00008B"">
+                  Nama Lengkap Pegawai<br/>
+                  <input type="text" class="form-control" name="nama_pegawai" placeholder="Nama lengkap pegawai" value="<?=$this->session->flashdata('oldinput')['nama_pegawai']?>" >
+                </div>
+            </div>
+            
+            <div class="form-group col-sm-12">
+                <div class="col-sm-12" style="color:#00008B">
+                  Jenis Kelamin<br/>
+                  <select class="form-control" name="jenis_kelamin">
+                      <option value="">Pilih</option>
+                      <option>Laki-laki</option>
+                      <option>Perempuan</option>
+                  </select>
+                </div>
+            </div>
+            
+            <div class="form-group col-sm-12">
+                <div class="col-sm-12" style="color:#00008B">
+                  Jabatan Pegawai<br/>
+                  <input type="text" class="form-control" name="jabatan" placeholder="Jabatan pegawai" value="<?=$this->session->flashdata('oldinput')['jabatan']?>" >
+                </div>
+            </div>
+            
+            <div class="form-group col-sm-12">
+                <div class="col-sm-12" style="color:#00008B">
+                  Kota Lahir<br/>
+                  <input type="text" class="form-control" name="kota_lahir" placeholder="Kota Lahir" value="<?=$this->session->flashdata('oldinput')['kota_lahir']?>" >
+                </div>
+            </div>     
+            
+            <div class="form-group col-sm-12">
+                <div class="col-sm-12" style="color:#00008B">
+                  Tanggal Lahir<br/>
+                  <input type="text" class="form-control date" name="tgl_lahir" placeholder="Tanggal Lahir" value="<?=$this->session->flashdata('oldinput')['tgl_lahir']?>"  required="required"  >
+                </div>    
+            </div>
+            
+            <div class="form-group col-sm-12">
+                <div class="col-sm-12" style="color:#00008B">
+                  Alamat Rumah<br/>            
+                  <input type="text" class="form-control" name="alamat" placeholder="Alamat Rumah" value="<?=$this->session->flashdata('oldinput')['alamat']?>" >
+                </div>  
+            </div>  
+            
+            <div class="form-group col-sm-12">
+                <div class="col-sm-12" style="color:#00008B">
+                  Strata Pendidikan<br/>
+                  <select class="form-control" name="strata_pendidikan">
+                      <option value="">Pilih</option>
+                      <option>S1</option>
+                      <option>S2</option>
+                      <option>S3</option>
+                  </select>
+                </div>
+            </div>
+            
+            <div class="form-group col-sm-12">
+                <div class="col-sm-12" style="color:#00008B">
+                  Bidang Pendidikan<br/>            
+                  <input type="text" class="form-control" name="bidang_pendidikan" placeholder="Bidang Pendidikan" value="<?=$this->session->flashdata('oldinput')['bidang_pendidikan']?>" >
+                </div>  
+            </div> 
+            
+            <div class="form-group col-sm-12">
+                <div class="col-sm-12" style="color:#00008B">
+                  Jumlah Anak<br/>            
+                  <input type="number" min="0" class="form-control" name="jml_anak" placeholder="Jumlah Anak" value="<?=$this->session->flashdata('oldinput')['jml_anak']?>" >
+                </div>  
+            </div> 
+            
+            <div class="form-group col-sm-12">
+                <div class="col-sm-12" style="color:#00008B">
+                  Email Pegawai<br/>            
+                  <input type="email" class="form-control" name="email" placeholder="Email Pegawai" value="<?=$this->session->flashdata('oldinput')['email']?>" >
+                </div>  
+            </div> 
+            
+            <div class="form-group col-sm-12">
+                <hr style="margin-bottom:0;margin-top:0" />
+            </div>
+            
+            <div class="col-sm-4">
+              <button type="submit" class="btn btn-block btn-flat">Save</button>
+            </div>
+            
+            <div class="col-sm-4">
+              <a href="<?=base_url($this->uri->segment(1).'/'.$this->uri->segment(2))?>" class="btn btn-danger btn-block btn-flat">Back</a>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+
+    </form>
+  </div>
+</section>
+
+<script src="<?=base_url("assets/adminlte/bower_components/select2/dist/js/select2.full.min.js")?>"></script>
+<script src="<?=base_url("assets/adminlte/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js")?>"></script>
+<script type="text/javascript">  
+  $(function () {
+    $('.select2').select2();
+    $('.date').datepicker({
+      autoclose: true,
+      format: 'yyyy-mm-dd',
+      todayHighlight:true,
+    });
+  });
+</script>

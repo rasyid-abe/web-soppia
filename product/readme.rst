@@ -1,0 +1,97 @@
+============
+SOPIA
+============
+    Aplikasi Sistem Operasional PIA (Sopia) merupakan sistem operasional yang dibuat untuk Yayasan pelatihan internal audit.
+
+Log Update
+===============
+- Templating Application [v.1.1.0.0]
+- Standard Crud R B A C [v.1.1.0.1]
+- Standard System R B A C [v.1.1.0.2]
+- Fixed Bug Auth login [v.1.1.0.3]
+- Fixed Bug Menu User fitur edit [v.1.1.0.4]
+- Fixed Bug Menu Role [v.1.1.0.5]
+- Fixed Bug Menu Role [v.1.1.0.6]
+- Fixed Bug Menu Permission [v.1.1.0.7]
+- Create Menu sesuai permintaan S R S [v.1.1.0.8]
+- Fixed Bug Menu Left Navigation [v.1.1.0.9]
+- fixed system [add controller folder] [v.1.1.1.0]
+- CRUD data daerah propinsi [v.1.1.1.1]  28 sep 2018
+- CRUD data daerah kota training [v.1.1.1.2]  28 sep 2018
+- Trigger on delete propinsi - kota training auto delete [v.1.1.1.3]  28 sep 2018
+- revisi nama soppia to sopia [v.1.1.1.4]  29 sep 2018
+- CRUD data Gedung [v.1.1.1.5]  29 sep 2018
+- CRUD data Ruang Lantai [v.1.1.1.6]  30 sep 2018
+- Trigger on delete Gedung - ruang lantai auto delete [v.1.1.1.7] 30 sep 2018
+- bug check in local and serve [v.1.1.1.8] 30 sep 2018
+- CRUD data Lokasi Simpan [v.1.1.1.9]  30 sep 2018
+- Trigger on delete Ruang lantai - lokasi simpan auto delete [v.1.2.0.0] 30 sep 2018
+- CRUD data Jenis Usaha [v.1.2.0.1]  30 sep 2018
+- CRUD data Bidang Unit Organisasi [v.1.2.0.2]  30 sep 2018
+- CRUD data Jenis pelatihan 1 [v.1.2.0.3]  30 sep 2018
+- CRUD data Jenis pelatihan 2 [v.1.2.0.4]  30 sep 2018
+- CRUD data Jenis pelatihan 3 [v.1.2.0.5]  30 sep 2018
+- CRUD data Kelompok Pelatihan [v.1.2.0.6]  1 Okt 2018
+- fixed bug user update [v.1.2.0.7] 1 Okt 2018
+- CRUD data Gelar  [v.1.2.0.8]  1 Okt 2018
+- CRUD data Jenis Sertifikasi1 [v.1.2.0.9]  1 Okt 2018
+- CRUD data Jenis Sertifikasi2 [v.1.2.1.0]  1 Okt 2018
+- CRUD data Sertifikasi [v.1.2.1.1]  1 Okt 2018
+- CRUD data Bidang pendidikan [v.1.2.1.2]  1 Okt 2018
+- CRUD data Strata pendidikan [v.1.2.1.3]  1 Okt 2018
+- CRUD data Agama [v.1.2.1.4]  1 Okt 2018
+- CRUD data Jenis Kelamin [v.1.2.1.5]  2 Okt 2018
+- CRUD data Sesi harian [v.1.2.1.6]  2 Okt 2018
+- CRUD data Paket Sesi harian [v.1.2.1.7]  2 Okt 2018
+- CRUD data Detail Paket Sesi harian [v.1.2.1.8]  2 Okt 2018
+- CRUD data Holding Group Perusahaan [v.1.2.1.9]  3 Okt 2018
+- CRUD data Perusahaan [v.1.2.2.0]  3 Okt 2018
+- CRUD data Data jenis pelatihan [v.1.2.2.1]  4 Okt 2018
+- Fixed keterangan note in menu change from tooltips to popover [v.1.2.2.2]  4 Okt 2018
+- create index label menu pelatihan [v.1.2.2.3] 4 okt 2018
+- create index label menu umum [v.1.2.2.4] 5 okt 2018
+- create index label menu kepegawaian [v.1.2.2.5] 5 okt 2018
+- create index label menu riset dan pengembangan [v.1.2.2.6] 6 okt 2018
+- Fixed bug permission menu [v.1.2.2.7] 8 okt 2018
+- CRUD  data materi dan aktifitas [v.1.2.2.8] 8 okt 2018
+- request submenu change dari tampilan dashboard ke dropdown standard [v.1.2.2.9] 9 okt 2018
+- add set position menu on menu menu [v.1.2.3.0] 10 okt 2018
+- CRUD Proforma kontrak [v.1.2.3.1] 10 okt 2018
+- CRUD kontrak resmi [v.1.2.3.2] 10 okt 2018
+- CRUD adddendum [v.1.2.3.3] 11 okt 2018
+- CRUD Non IHT - Pembukaan kelas non iht/reguler [v.1.2.3.4] 11 okt 2018
+- CRUD Calon peserta part1 [v.1.2.3.4.1/2] 12 okt 2018
+- Revisi CRUD Calon peserta part2 [v.1.2.3.5] 13 okt 2018
+- CRUD pembukaan-kelas [v.1.2.3.6] 13 okt 2018
+- CRUD setting-materi-kelas [v.1.2.3.7] 13 okt 2018
+- backup Files[v.1.2.3.8] 13 okt 2018
+- revisi warna button export all table [v.1.2.3.9] 13 okt 2018
+- backup Database[v.1.2.4.0] 15 okt 2018
+- CRUD jadwal Kelas [v.1.2.4.1] 15 okt 2018
+- CRUD pembebanan-biaya-kelas [v.1.2.4.2] 16 okt 2018
+- CRUD pendaftaran (instruktur) [v.1.2.4.3] 16 okt 2018
+- CRUD penugasan (instruktur) [v.1.2.4.4] 17 okt 2018
+- CRUD Pembukaan Kunci entry (Peserta) [v.1.2.4.5] 17 okt 2018
+- CRUD pencatatan-aktifitas (instruktur) [v.1.2.4.6] 17 okt 2018
+- ADD NEW FITUR [CRUD] Posting data peserta pada menu pelatihan (peserta) [v.1.2.4.7] 18 okt 2018
+- ADD NEW FITUR [U] Update data calon peserta/peserta pada menu pelatihan (peserta) [v.1.2.4.8] 18 okt 2018
+- ADD NEW FITUR [RU] penutupan-kelas (kelas-pelatihan)  [v.1.2.4.9] 18 okt 2018
+- CRUD konektifitas-ds-qia (permohonan) [v.1.2.5.0] 19 okt 2018
+- RU konektifitas-ds-qia (penarikan-surat) [v.1.2.5.1]  19 okt 2018
+- CRUD Evaluasi Instruktur (Pencatatan ESKT) [v.1.2.5.2]  19 okt 2018
+- Revisi IHT [v.1.2.5.5] 30 okt 2018
+	- revisi proforma crud [v.1.2.5.3]
+	- revisi kontrak resmi crud [v.1.2.5.4]
+	- revisi addendum 1,2,3-n crud [v.1.2.5.5]
+- Revisi Accounting Jurnal [v.1.2.5.6]  30 okt 2018
+- [v.1.2.5.7] 7 November 2018
+    - Revisi Proforma Kontrak, Kontrak Resmi dan Addendum
+    - Revisi Password Encrypt/Decrypt
+    - Revisi Susunan Menu
+    - Revisi RBAC Menampilkan Role dan Menu Role
+    - Penambahan fitur Set Time Access
+- [v.1.2.5.8] 9 November 2018
+    - CRUD Pengadaan Inventaris
+    - CRUD Pengadaan Habis Pakai
+    
+
